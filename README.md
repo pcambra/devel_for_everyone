@@ -6,3 +6,5 @@ Presented at [Drupal London Learning Meetup on February 2013](http://www.meetup.
 
 This git repository is a fork of the [Google IO 2012 slide deck](http://code.google.com/p/io-2012-slides/). 
 As such, many of the files still contain references to Google and IO 2102.
+
+Access the presentation: http://pcambra.github.com/devel_for_everyone
