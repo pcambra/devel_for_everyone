@@ -1,0 +1,41 @@
+.about-me h2 {
+  font-size: 3.5em;
+}
+.about-me h3 {
+  font-size: 1.5em;
+}
+li {
+  font-size: 2em;
+}
+h1 {
+  font-size: 3em;
+}
+.demo article {
+  margin-top: 10px;
+}
+.demo iframe {
+  height: 550px;
+}
+.thank-you-slide footer {
+  bottom: 40px;
+}
+.thank-you-slide footer a {
+  color: #fff;
+}
+.fill article {
+  margin: 25% auto;
+}
+.fill .london, .oviedo {
+  color: #fff;
+  font-size: 1.8em;
+  background-color:rgba(163,78,90,0.9);
+  padding: 0.3em;
+  border-radius: 10px;
+  width: 45%;
+}
+.fill .oviedo {
+  float: right;
+}
+.fill .london {
+  float: left;  
+}

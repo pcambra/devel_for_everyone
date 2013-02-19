@@ -1,0 +1,212 @@
+<html>
+<head>
+  <title>Devel for everyone, London Drupal meetup, 2013</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <!--<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">-->
+  <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+  <!--This one seems to work all the time, but really small on ipad-->
+  <!--<meta name="viewport" content="initial-scale=0.4">-->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="stylesheet" media="all" href="theme/css/default.css">
+  <link rel="stylesheet" media="only screen and (max-device-width: 480px)" href="theme/css/phone.css">
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->
+  <script data-main="js/slides" src="js/require-1.0.8.min.js"></script>
+</head>
+<body style="opacity: 0">
+<slides class="layout-widescreen">
+
+  <slide class="title-slide segue nobackground">
+    <!-- The content of this hgroup is replaced programmatically through the slide_config.json. -->
+    <hgroup class="auto-fadein">
+      <h1 data-config-title><!-- populated from slide_config.json --></h1>
+      <p data-config-presenter><!-- populated from slide_config.json --></p>
+      <p>London Drupal meetup, February 2013</p>
+    </hgroup>
+  </slide>
+
+  <slide class="about-me">
+    <hgroup>
+      <h2>About me</h2>
+      <h3>Pedro Cambra</h3>      
+    </hgroup>
+    <article>
+      <ul>
+        <li>Drupal developer at Commerce Guys</li>
+        <li>Community elected director at Drupal Association</li>
+        <li>Devel co maintainer</li>
+        <li>Drupal enthusiastic!</li>        
+        <li>London newbie</li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide class="fill nobackground" style="background-image: url(images/olympic-rainy-dream.jpg)">
+    <hgroup>
+      <h2 class="white">Oh, and I come from Spain!</h2>
+    </hgroup>
+    <article class="build">
+      <div class="london">London <br/> Rainfall: 591.8mm <br/> Rainy days: 110.4</div>      
+      <div class="oviedo">Oviedo <br/> Rainfall: 973mm <br/> Rainy days: 122</div>      
+    </article>
+    <footer class="source white">http://www.flickr.com/photos/thelastminute/7738371018/</footer>
+  </slide>  
+  
+  <slide>
+    <hgroup>
+      <h1>Tools for site builders</h1>
+    </hgroup>
+    <article>
+      <ul class="build">
+        <li><strong>Devel menu</strong>: Cache clear, run cron, variable editor...</li>
+        <li>Devel generate</li>
+        <li>Node Access</li>
+        <li>User switch</li>
+        <li>Display machine names</li>                     
+      </ul>
+    </article>
+  </slide>  
+  
+  <slide class="demo">
+    <hgroup>
+      <h2>Demo time!</h2>
+    </hgroup>  
+    <article>
+      <iframe data-src="http://drupal7.local"></iframe>
+    </article>
+  </slide>
+  
+  <slide>
+    <hgroup>
+      <h1>Tools for developers</h1>
+    </hgroup>
+    <article>
+      <ul class="build">
+        <li>Tools for debugging: dpm, Krumo, dpq, dpr, dd, ddebug_backtrace... </li>
+        <li>Performance tools: display query logs, display page timer and memory usage.</li>
+        <li>XHProf</li>
+        <li>Drush integration: fn-hook, fn-view</li>
+      </ul>
+    </article>
+  </slide>
+  
+  <slide>
+    <hgroup>
+      <h1>dpm or dsm?</h1>
+    </hgroup>
+    <article>
+      <pre class="prettyprint" data-lang="php">
+/**
+ * Legacy function that was poorly named.
+ *
+ * Use dpm() instead, since the 'p' maps to 'print_r'.
+ */
+function dsm($input, $name = NULL) {
+  <b>return dpm($input, $name);</b>
+}
+</pre>
+    </article>
+  </slide>  
+  
+  <slide class="demo">
+    <hgroup>
+      <h2>Demo time! (with the help of <a href="http://drupal.org/project/devel_demo">Devel demo</a>)</h2>
+    </hgroup>  
+    <article>
+      <iframe data-src="http://drupal7.local"></iframe>
+    </article>
+  </slide>  
+  
+  <slide>
+    <hgroup>
+      <h1>Tools for themers</h1>
+    </hgroup>
+    <article>
+      <ul class="build">
+        <li>Rebuild theme registry on page load.</li>
+        <li>Use uncompressed jQuery.</li>
+        <li>Display page render array.</li>        
+        <li><a href="http://drupal.org/project/devel_themer">Theme developer</a>: "The firebug for Drupal themeing", now as a separate project.</li>
+      </ul>
+    </article>
+  </slide>  
+  
+  <slide class="demo">
+    <hgroup>
+      <h2>Demo time!</h2>
+    </hgroup>  
+    <article>
+      <iframe data-src="http://drupal7.local"></iframe>
+    </article>
+  </slide> 
+  
+  <slide>
+    <hgroup>
+      <h2>Let's take a look to contrib</h2>
+    </hgroup>
+    <article>
+      <ul class="build">
+        <li><a href="http://drupal.org/project/search_krumo">Search Krumo</a></li>
+        <li><a href ="http://drupal.org/project/inline_devel">Inline Devel</a> (-dev version)</li>
+        <li><a href="http://drupal.org/project/devel_image_provider">Devel images provider</a></li>
+        <li><a href="http://drupal.org/project/devel_contrib">Devel contrib</a> & <a href="http://drupal.org/project/devel_ext_log">Devel extended logging</a></li>                     
+        <li><a href="http://drupal.org/project/commerce_devel">Commerce Devel</a> (you knew I was sneaking this here)</li>
+      </ul>
+    </article>
+  </slide>  
+  
+  <slide class="demo">
+    <hgroup>
+      <h2>Demo time!</h2>
+    </hgroup>  
+    <article>
+      <iframe data-src="http://drupal7.local"></iframe>
+    </article>
+  </slide>   
+  
+  <slide>
+    <hgroup>
+      <h1>How can you help?</h1>
+    </hgroup>
+    <article>
+      <ul>
+        <li><a href="http://groups.drupal.org/drupalcontribute">Drupalcontribute</a> = one day event aimed to lower the barrier of contribution.</li>
+        <li>DevelContribute = DrupalContribute focused in Devel.</li>
+        <li>Next DevelContribute: This Saturday!</li>                     
+        <li><a href="http://groups.drupal.org/drupalcontribute">More on DrupalContributes</a> and <a href="http://portland2013.drupal.org/content/boost-your-drupal-contribution-skills-stay-social">session proposed for Portland</a></li>
+      </ul>
+    </article>
+  </slide>     
+
+  <slide>
+    <hgroup>
+      <h1>Drupal Global Training Days</h1>
+    </hgroup>
+    <article>
+      <ul>
+        <li>Initiative by the Drupal Association</li>
+        <li>Training for beginners, introduction to Drupal</li>
+        <li>All over the world!</li>                     
+        <li>Next <a href="http://drupal.org/learn-drupal">global training day</a> in London: March 15th!</li>
+      </ul>
+    </article>
+  </slide>     
+  
+  <slide class="thank-you-slide segue nobackground">
+    <article class="flexbox vleft auto-fadein">
+      <h2>&lt;Thank You!&gt;</h2>
+    </article>
+    <p class="auto-fadein" data-config-presenter><!-- populated from slide_config.json --></p>
+    <p class="auto-fadein" data-config-contact><!-- populated from slide_config.json --></p>    
+    <footer class="source white">Slides baked using <a href="http://code.google.com/p/io-2012-slides/">Google IO 2012 template</a></footer>
+  </slide>  
+
+  <slide class="backdrop"></slide>
+
+</slides>
+<!--[if IE]>
+  <script src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js"></script>
+  <script>CFInstall.check({mode: 'overlay'});</script>
+<![endif]-->
+</body>
+</html>
